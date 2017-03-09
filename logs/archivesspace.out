@@ -1,0 +1,984 @@
+Loading ArchivesSpace configuration file from path: /users/corbettg/Sites/archivesspace_test/config/config.rb
+Loading ArchivesSpace configuration file from path: /users/corbettg/Sites/archivesspace_test/config/config.rb
+****
+**** INFO: Generated a secret key for AppConfig[:frontend_cookie_secret]
+****       and stored it in /Users/corbettg/Sites/archivesspace_test/data/frontend_cookie_secret_cookie_secret.dat.
+****
+**** If you're running ArchivesSpace in a clustered setup, you will
+**** need to make sure that all instances share the same value for this
+**** setting.  You can do that by setting a value for AppConfig[:frontend_cookie_secret]
+**** in your config.rb file.
+****
+
+****
+**** INFO: Generated a secret key for AppConfig[:public_cookie_secret]
+****       and stored it in /Users/corbettg/Sites/archivesspace_test/data/public_cookie_secret_cookie_secret.dat.
+****
+**** If you're running ArchivesSpace in a clustered setup, you will
+**** need to make sure that all instances share the same value for this
+**** setting.  You can do that by setting a value for AppConfig[:public_cookie_secret]
+**** in your config.rb file.
+****
+
+Mar 09, 2017 9:45:45 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-8.1.5.v20120716
+Mar 09, 2017 9:45:45 AM org.eclipse.jetty.webapp.WebInfConfiguration unpack
+INFO: Extract jar:file:/Users/corbettg/Sites/archivesspace_test/wars/backend.war!/ to /Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8089-backend.war-_-any-/webapp
+Mar 09, 2017 9:45:46 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+Mar 09, 2017 9:45:46 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8089-backend.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/backend.war
+Mar 09, 2017 9:45:46 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8089-backend.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/backend.war
+Mar 09, 2017 9:45:46 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: jruby 1.7.21 (1.9.3p551) 2015-07-07 a741a82 on Java HotSpot(TM) 64-Bit Server VM 1.7.0_79-b15 +jit [darwin-x86_64]
+Mar 09, 2017 9:45:46 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: using a shared (threadsafe!) runtime
+Loading ArchivesSpace configuration file from path: /users/corbettg/Sites/archivesspace_test/config/config.rb
+Running database migrations for demo database
+Migrating external IDs for records of type subject
+Migrating external IDs for records of type accession
+Migrating external IDs for records of type archival_object
+Migrating external IDs for records of type collection_management
+Migrating external IDs for records of type digital_object
+Migrating external IDs for records of type digital_object_component
+Migrating external IDs for records of type event
+Migrating external IDs for records of type location
+Migrating external IDs for records of type resource
+Removing old external ID table for type subject
+Removing old external ID table for type accession
+Removing old external ID table for type archival_object
+Removing old external ID table for type collection_management
+Removing old external ID table for type digital_object
+Removing old external ID table for type digital_object_component
+Removing old external ID table for type event
+Removing old external ID table for type location
+Removing old external ID table for type resource
+Migrating notes for records of type resource
+Migrating notes for records of type archival_object
+Migrating notes for records of type digital_object
+Migrating notes for records of type digital_object_component
+Migrating notes for records of type agent_person
+Migrating notes for records of type agent_corporate_entity
+Migrating notes for records of type agent_family
+Migrating notes for records of type agent_software
+Adding agent_hash for agent_person
+Adding agent_hash for agent_corporate_entity
+Adding agent_hash for agent_family
+Adding agent_hash for agent_software
+Adding range date to the list of date_type enums
+Changing all agent dates that are bulk_dates to ranges 
+*** ADDING SOME ENUMS
+Triggering reindex of resource
+Triggering reindex of archival_object
+Triggering reindex of digital_object
+Making location_temporary list editble
+UPDATING OUR CONTROLLED VALUE LISTS...
+Renaming all sequences, this may take a while...
+Total time to rename sequences: 0.013
+
+
+    ****************************************************************************************************
+    vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv VERY IMPORTANT vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv 
+    ****************************************************************************************************
+   
+
+    You are updating to a version of ASPACE that has a new container managment model. If you have existing data,
+    this will be migrated when you start the application for the first time. The application will not be available 
+    until this has completed. 
+    PLEASE NOTE : The process wil provide warning and information regarding records that might need to be manually
+    fixed. Keep the log from this processes for data cleanup. 
+    
+
+    ****************************************************************************************************
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ VERY IMPORTANT ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+    ****************************************************************************************************
+
+
+
+
+All done.
+
+************************************************************************
+***
+*** WARNING: Running against the demo database, which is not intended
+*** for production use.
+***
+*** Please see the README.md file for instructions on configuring MySQL.
+***
+************************************************************************
+
+I, [2017-03-09T09:46:41.437000 #1490]  INFO -- : Thread-3992: Connecting to database: jdbc:derby:/Users/corbettg/Sites/archivesspace_test/data/archivesspace_demo_db;create=true;aspacedemo=true. Max connections: 28
+I, [2017-03-09T09:46:45.140000 #1490]  INFO -- : Thread-3992: Starting job scheduler
+I, [2017-03-09T09:46:45.145000 #1490]  INFO -- : Thread-3992: Enabling backups for the embedded demo database running at schedule: 0 4 * * *
+I, [2017-03-09T09:46:47.810000 #1490]  INFO -- : Thread-3992: Creating system preferences
+I, [2017-03-09T09:46:48.415000 #1490]  INFO -- : Thread-3992: 
+
+I, [2017-03-09T09:46:48.415000 #1490]  INFO -- : Thread-3992: ****************************************************************************************************
+I, [2017-03-09T09:46:48.416000 #1490]  INFO -- : Thread-3992: Migrating existing containers to the new container model...
+I, [2017-03-09T09:46:48.560000 #1490]  INFO -- : Thread-3992: Completed: existing containers have been migrated to the new container model.
+I, [2017-03-09T09:46:48.560000 #1490]  INFO -- : Thread-3992: ****************************************************************************************************
+I, [2017-03-09T09:46:48.561000 #1490]  INFO -- : Thread-3992: 
+
+Mar 09, 2017 9:46:48 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8089-backend.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/backend.war
+Mar 09, 2017 9:46:48 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started SelectChannelConnector@0.0.0.0:8089
+Mar 09, 2017 9:46:48 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-8.1.5.v20120716
+Mar 09, 2017 9:46:48 AM org.eclipse.jetty.webapp.WebInfConfiguration unpack
+INFO: Extract jar:file:/Users/corbettg/Sites/archivesspace_test/wars/solr.war!/ to /Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8090-solr.war-_-any-/webapp
+Mar 09, 2017 9:46:50 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+Mar 09, 2017 9:46:50 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8090-solr.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/solr.war
+Mar 09, 2017 9:46:50 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8090-solr.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/solr.war
+Mar 09, 2017 9:46:50 AM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init()
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: No /solr/home in JNDI
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: using system property solr.solr.home: /Users/corbettg/Sites/archivesspace_test/data/solr_home
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/Users/corbettg/Sites/archivesspace_test/data/solr_home/'
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.ConfigSolr fromFile
+INFO: Loading container configuration from /Users/corbettg/Sites/archivesspace_test/data/solr_home/solr.xml
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.ConfigSolr fromFile
+INFO: /Users/corbettg/Sites/archivesspace_test/data/solr_home/solr.xml does not exist, using default configuration
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.CoreContainer <init>
+INFO: New CoreContainer 1135265997
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.CoreContainer load
+INFO: Loading cores into CoreContainer [instanceDir=/Users/corbettg/Sites/archivesspace_test/data/solr_home/]
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting socketTimeout to: 0
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting urlScheme to: null
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting connTimeout to: 0
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting maxConnectionsPerHost to: 20
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting corePoolSize to: 0
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting maximumPoolSize to: 2147483647
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting maxThreadIdleTime to: 5
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting sizeOfQueue to: -1
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting fairnessPolicy to: false
+Mar 09, 2017 9:46:50 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting useRetries to: false
+Mar 09, 2017 9:46:50 AM org.apache.solr.update.UpdateShardHandler <init>
+INFO: Creating UpdateShardHandler HTTP client with params: socketTimeout=0&connTimeout=0&retry=true
+Mar 09, 2017 9:46:50 AM org.apache.solr.logging.LogWatcher createWatcher
+INFO: SLF4J impl is org.slf4j.impl.JDK14LoggerFactory
+Mar 09, 2017 9:46:50 AM org.apache.solr.logging.LogWatcher newRegisteredLogWatcher
+INFO: Registering Log Listener [JUL (org.slf4j.impl.JDK14LoggerFactory)]
+Mar 09, 2017 9:46:50 AM org.apache.solr.core.CoreContainer load
+INFO: Host Name: 
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/Users/corbettg/Sites/archivesspace_test/data/solr_home/collection1/'
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: 4.0.0
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+Mar 09, 2017 9:46:51 AM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema from /Users/corbettg/Sites/archivesspace_test/data/solr_home/collection1/conf/schema.xml
+Mar 09, 2017 9:46:51 AM org.apache.solr.schema.IndexSchema readSchema
+INFO: [collection1] Schema name=example
+Mar 09, 2017 9:46:51 AM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.CoreContainer create
+INFO: Creating SolrCore 'collection1' using configuration from instancedir /Users/corbettg/Sites/archivesspace_test/data/solr_home/collection1/
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore initDirectoryFactory
+INFO: solr.NRTCachingDirectoryFactory
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore <init>
+INFO: [collection1] Opening new SolrCore at /Users/corbettg/Sites/archivesspace_test/data/solr_home/collection1/, dataDir=/Users/corbettg/Sites/archivesspace_test/data/solr_index/
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore <init>
+INFO: JMX monitoring not detected for core: collection1
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /Users/corbettg/Sites/archivesspace_test/data/solr_index
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore getNewIndexDir
+INFO: New index directory detected: old=null new=/Users/corbettg/Sites/archivesspace_test/data/solr_index/index/
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore initIndex
+WARNING: [collection1] Solr index directory '/Users/corbettg/Sites/archivesspace_test/data/solr_index/index' doesn't exist. Creating new index...
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /Users/corbettg/Sites/archivesspace_test/data/solr_index/index
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/Users/corbettg/Sites/archivesspace_test/data/solr_index/index lockFactory=NativeFSLockFactory@/Users/corbettg/Sites/archivesspace_test/data/solr_index/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit generation = 1
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore initWriters
+INFO: created json: solr.JSONResponseWriter
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore loadUpdateProcessorChains
+INFO: no updateRequestProcessorChain defined as default, creating implicit default
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: org.apache.solr.handler.UpdateRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/json: org.apache.solr.handler.UpdateRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/csv: org.apache.solr.handler.UpdateRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/json/docs: org.apache.solr.handler.UpdateRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /select: solr.SearchHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+WARNING: Multiple requestHandler registered to the same name: /update ignoring: org.apache.solr.handler.UpdateRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: solr.UpdateRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/: solr.admin.AdminHandlers
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.ReplicationHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /replication: solr.ReplicationHandler
+Mar 09, 2017 9:46:51 AM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+Mar 09, 2017 9:46:51 AM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+Mar 09, 2017 9:46:51 AM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+Mar 09, 2017 9:46:51 AM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+Mar 09, 2017 9:46:51 AM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+Mar 09, 2017 9:46:51 AM org.apache.solr.update.CommitTracker <init>
+INFO: Hard AutoCommit: if uncommited for 60000ms; if 1000 uncommited docs 
+Mar 09, 2017 9:46:51 AM org.apache.solr.update.CommitTracker <init>
+INFO: Soft AutoCommit: disabled
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/Users/corbettg/Sites/archivesspace_test/data/solr_index/index lockFactory=NativeFSLockFactory@/Users/corbettg/Sites/archivesspace_test/data/solr_index/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit generation = 1
+Mar 09, 2017 9:46:51 AM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@6fdc23b0[collection1] main
+Mar 09, 2017 9:46:51 AM org.apache.solr.rest.ManagedResourceStorage newStorageIO
+WARNING: Cannot write to config directory /Users/corbettg/Sites/archivesspace_test/data/solr_home/collection1/conf; switching to use InMemory storage instead.
+Mar 09, 2017 9:46:51 AM org.apache.solr.rest.RestManager init
+INFO: Initializing RestManager with initArgs: {}
+Mar 09, 2017 9:46:51 AM org.apache.solr.rest.ManagedResourceStorage load
+INFO: Reading _rest_managed.json using InMemoryStorage
+Mar 09, 2017 9:46:51 AM org.apache.solr.rest.ManagedResource reloadFromStorage
+WARNING: No stored data found for /rest/managed
+Mar 09, 2017 9:46:51 AM org.apache.solr.rest.ManagedResourceStorage$JsonStorage store
+INFO: Saved JSON object to path _rest_managed.json using InMemoryStorage
+Mar 09, 2017 9:46:51 AM org.apache.solr.rest.RestManager init
+INFO: Initializing 0 registered ManagedResources
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.CoreContainer registerCore
+INFO: registering core: collection1
+Mar 09, 2017 9:46:51 AM org.apache.solr.core.SolrCore registerSearcher
+INFO: [collection1] Registered new searcher Searcher@6fdc23b0[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+Mar 09, 2017 9:46:51 AM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: user.dir=/Users/corbettg/Sites/archivesspace_test
+Mar 09, 2017 9:46:51 AM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init() done
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started SelectChannelConnector@0.0.0.0:8090
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-8.1.5.v20120716
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.webapp.WebInfConfiguration unpack
+INFO: Extract jar:file:/Users/corbettg/Sites/archivesspace_test/wars/indexer.war!/ to /Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8091-indexer.war-_aspace-indexer-any-/webapp
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /aspace-indexer, did not find org.apache.jasper.servlet.JspServlet
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/aspace-indexer,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8091-indexer.war-_aspace-indexer-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/indexer.war
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/aspace-indexer,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8091-indexer.war-_aspace-indexer-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/indexer.war
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: jruby 1.7.21 (1.9.3p551) 2015-07-07 a741a82 on Java HotSpot(TM) 64-Bit Server VM 1.7.0_79-b15 +jit [darwin-x86_64]
+Mar 09, 2017 9:46:51 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: using a shared (threadsafe!) runtime
+Loading ArchivesSpace configuration file from path: /users/corbettg/Sites/archivesspace_test/config/config.rb
+D, [2017-03-09T09:46:56.707000 #1490] DEBUG -- : Thread-4232: GET /config/enumerations [session: nil]
+D, [2017-03-09T09:46:56.716000 #1490] DEBUG -- : Thread-4232: Post-processed params: {}
+D, [2017-03-09T09:46:59.255000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"460840"}, ["[{\"lock_version\":0,\"name\":\"linked_agent_archival_record_relators\",\"editable\":true,\"create_time\":\"2017-03-09T14:46:07Z\",\"system_mtime\":\"2017-03-09T14:46:07Z\",\"user_mtime\":\"2017-03-09T14:46:07Z\",\"jsonmodel_type\":\"enumeration\",\"relationships\":[\"relator\"],\"enumeration_values\":[{\"id\":9,\"enumeration_id\":1,\"value\":\"acp\",\"readonly\":0,\"position\":0,... in 2427.0ms
+Starting periodic indexer
+2017-03-09 09:47:00 -0500: Running index round
+D, [2017-03-09T09:47:00.219000 #1490] DEBUG -- : Thread-4238: POST /users/search_indexer/login [session: nil]
+D, [2017-03-09T09:47:00.248000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:username=>"search_indexer", :password=>"[FILTERED]", :expiring=>false}
+D, [2017-03-09T09:47:00.632000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"555"}, ["{\"session\":\"d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf\",\"user\":{\"lock_version\":1,\"username\":\"search_indexer\",\"name\":\"Search Indexer\",\"is_system_user\":true,\"create_time\":\"2017-03-09T14:46:46Z\",\"system_mtime\":\"2017-03-09T14:47:00Z\",\"user_mtime\":\"2017-03-09T14:47:00Z\",\"jsonmodel_type\":\"user\",\"groups\":[],\"is_admin\":false,\"uri\"... in 412.0ms
+D, [2017-03-09T09:47:00.669000 #1490] DEBUG -- : Thread-4242: GET /repositories [session: #<Session:0x5a70edee @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:47:00.678000 #1490] DEBUG -- : Thread-4242: Post-processed params: {}
+D, [2017-03-09T09:47:00.688000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 43.0ms
+D, [2017-03-09T09:47:00.761000 #1490] DEBUG -- : Thread-4244: GET /delete-feed?modified_since=0&page=1&page_size=25 [session: #<Session:0x57e4410f @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:47:00.768000 #1490] DEBUG -- : Thread-4244: Post-processed params: {"modified_since"=>0, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:47:00.820000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 74.0ms
+Starting realtime indexer for: http://localhost:8089
+Mar 09, 2017 9:47:05 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/aspace-indexer,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8091-indexer.war-_aspace-indexer-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/indexer.war
+Mar 09, 2017 9:47:05 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started SelectChannelConnector@0.0.0.0:8091
+D, [2017-03-09T09:47:05.168000 #1490] DEBUG -- : Thread-4242: POST /users/search_indexer/login [session: nil]
+D, [2017-03-09T09:47:05.171000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:username=>"search_indexer", :password=>"[FILTERED]", :expiring=>false}
+Mar 09, 2017 9:47:05 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-8.1.5.v20120716
+Mar 09, 2017 9:47:05 AM org.eclipse.jetty.webapp.WebInfConfiguration unpack
+INFO: Extract jar:file:/Users/corbettg/Sites/archivesspace_test/wars/frontend.war!/ to /Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8080-frontend.war-_-any-/webapp
+D, [2017-03-09T09:47:05.385000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"555"}, ["{\"session\":\"f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56\",\"user\":{\"lock_version\":2,\"username\":\"search_indexer\",\"name\":\"Search Indexer\",\"is_system_user\":true,\"create_time\":\"2017-03-09T14:46:46Z\",\"system_mtime\":\"2017-03-09T14:47:05Z\",\"user_mtime\":\"2017-03-09T14:47:05Z\",\"jsonmodel_type\":\"user\",\"groups\":[],\"is_admin\":false,\"uri\"... in 217.0ms
+D, [2017-03-09T09:47:05.412000 #1490] DEBUG -- : Thread-4232: GET /update-feed?last_sequence=0&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x1723281d @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:47:05.418000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:last_sequence=>0, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+Mar 09, 2017 9:47:06 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+Mar 09, 2017 9:47:06 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8080-frontend.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/frontend.war
+Mar 09, 2017 9:47:06 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8080-frontend.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/frontend.war
+Mar 09, 2017 9:47:06 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: jruby 1.7.21 (1.9.3p551) 2015-07-07 a741a82 on Java HotSpot(TM) 64-Bit Server VM 1.7.0_79-b15 +jit [darwin-x86_64]
+Mar 09, 2017 9:47:06 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: using a shared (threadsafe!) runtime
+Loading ArchivesSpace configuration file from path: /users/corbettg/Sites/archivesspace_test/config/config.rb
+initialize java
+D, [2017-03-09T09:47:17.672000 #1490] DEBUG -- : Thread-4242: GET /notifications?last_sequence=0 [session: nil]
+D, [2017-03-09T09:47:17.679000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>0}
+Found repository menu items for plug-ins: ["lcnaf"]
+D, [2017-03-09T09:47:17.682000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"526"}, ["[{\"code\":\"REFRESH_ACLS\",\"params\":{},\"sequence\":1489070806,\"timestamp\":1489070808569},{\"code\":\"REFRESH_PREFERENCES\",\"params\":{},\"sequence\":1489070807,\"timestamp\":1489070808574},{\"code\":\"BACKEND_STARTED\",\"params\":{},\"sequence\":1489070808,\"timestamp\":1489070808578},{\"code\":\"REFRESH_ACLS\",\"params\":{},\"sequence\":1489070809,\"timestamp\":1489070809216}... in 9.0ms
+D, [2017-03-09T09:47:17.692000 #1490] DEBUG -- : Thread-4244: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:47:17.695000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:last_sequence=>1489070811}
+Forcing Rails configuration
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8080-frontend.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/frontend.war
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started SelectChannelConnector@0.0.0.0:8080
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-8.1.5.v20120716
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.webapp.WebInfConfiguration unpack
+INFO: Extract jar:file:/Users/corbettg/Sites/archivesspace_test/wars/public.war!/ to /Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8081-public.war-_-any-/webapp
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8081-public.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/public.war
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8081-public.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/public.war
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: jruby 1.7.21 (1.9.3p551) 2015-07-07 a741a82 on Java HotSpot(TM) 64-Bit Server VM 1.7.0_79-b15 +jit [darwin-x86_64]
+Mar 09, 2017 9:47:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: INFO: using a shared (threadsafe!) runtime
+Loading ArchivesSpace configuration file from path: /users/corbettg/Sites/archivesspace_test/config/config.rb
+D, [2017-03-09T09:47:29.170000 #1490] DEBUG -- : Thread-10048: GET /notifications?last_sequence=0 [session: nil]
+D, [2017-03-09T09:47:29.177000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:last_sequence=>0}
+D, [2017-03-09T09:47:29.179000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"526"}, ["[{\"code\":\"REFRESH_ACLS\",\"params\":{},\"sequence\":1489070806,\"timestamp\":1489070808569},{\"code\":\"REFRESH_PREFERENCES\",\"params\":{},\"sequence\":1489070807,\"timestamp\":1489070808574},{\"code\":\"BACKEND_STARTED\",\"params\":{},\"sequence\":1489070808,\"timestamp\":1489070808578},{\"code\":\"REFRESH_ACLS\",\"params\":{},\"sequence\":1489070809,\"timestamp\":1489070809216}... in 9.0ms
+D, [2017-03-09T09:47:29.187000 #1490] DEBUG -- : Thread-10050: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:47:29.190000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:47:29.825000 #1490] DEBUG -- : Thread-10048: POST /users/staff_system/login [session: nil]
+D, [2017-03-09T09:47:29.835000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:username=>"staff_system", :password=>"[FILTERED]", :expiring=>false}
+Forcing Rails configuration
+Mar 09, 2017 9:47:29 AM org.eclipse.jetty.server.handler.ContextHandler callContextInitialized
+INFO: started o.e.j.w.WebAppContext{/,file:/Users/corbettg/Sites/archivesspace_test/data/tmp/jetty-0.0.0.0-8081-public.war-_-any-/webapp/},/users/corbettg/Sites/archivesspace_test/wars/public.war
+Mar 09, 2017 9:47:29 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started SelectChannelConnector@0.0.0.0:8081
+Mar 09, 2017 9:47:29 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-8.1.5.v20120716
+Mar 09, 2017 9:47:29 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started SelectChannelConnector@0.0.0.0:8888
+************************************************************
+  Welcome to ArchivesSpace!
+  You can now point your browser to http://localhost:8080
+************************************************************
+D, [2017-03-09T09:47:30.090000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"448"}, ["{\"session\":\"0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f\",\"user\":{\"lock_version\":1,\"username\":\"staff_system\",\"name\":\"Staff System User\",\"is_system_user\":true,\"create_time\":\"2017-03-09T14:46:47Z\",\"system_mtime\":\"2017-03-09T14:47:30Z\",\"user_mtime\":\"2017-03-09T14:47:30Z\",\"jsonmodel_type\":\"user\",\"groups\":[],\"is_admin\":false,\"uri\... in 265.0ms
+D, [2017-03-09T09:47:30.110000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"353"}, ["[{\"record\":{\"lock_version\":1,\"username\":\"staff_system\",\"name\":\"Staff System User\",\"is_system_user\":true,\"create_time\":\"2017-03-09T14:46:47Z\",\"system_mtime\":\"2017-03-09T14:47:30Z\",\"user_mtime\":\"2017-03-09T14:47:30Z\",\"jsonmodel_type\":\"user\",\"groups\":[],\"is_admin\":false,\"uri\":\"/users/4\"},\"uri\":\"/users/4\",\"sequence\":1489070826,\"timestamp\":148... in 24713.0ms
+D, [2017-03-09T09:47:30.110000 #1490] DEBUG -- : Thread-4242: POST /update_monitor [session: #<Session:0xc04071b @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:47:30.116000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+Mar 09, 2017 9:47:30 AM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
+Mar 09, 2017 9:47:30 AM org.apache.solr.core.SolrCore openNewSearcher
+INFO: SolrIndexSearcher has not changed - not re-opening: org.apache.solr.search.SolrIndexSearcher
+Mar 09, 2017 9:47:30 AM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Mar 09, 2017 9:47:30 AM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [collection1] webapp= path=/update params={} {commit=} 0 15
+D, [2017-03-09T09:47:30.162000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 63.0ms
+D, [2017-03-09T09:47:30.175000 #1490] DEBUG -- : Thread-4242: GET /update-feed?last_sequence=1489070826&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x70f8b7b3 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:47:30.179000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>1489070826, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+2017-03-09 09:47:30 -0500: Running index round
+D, [2017-03-09T09:47:30.847000 #1490] DEBUG -- : Thread-4232: GET /repositories [session: #<Session:0x68aef75f @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:47:30.850000 #1490] DEBUG -- : Thread-4232: Post-processed params: {}
+D, [2017-03-09T09:47:30.853000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 12.0ms
+D, [2017-03-09T09:47:30.905000 #1490] DEBUG -- : Thread-10048: GET /delete-feed?modified_since=1489070790&page=1&page_size=25 [session: #<Session:0x7dbfe72c @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:47:30.952000 #1490] DEBUG -- : Thread-10048: Post-processed params: {"modified_since"=>1489070790, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:47:30.972000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 74.0ms
+D, [2017-03-09T09:47:39.831000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x6e9a7755 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:47:39.842000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:47:39.856000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 32.0ms
+D, [2017-03-09T09:47:49.829000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x515ac896 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:47:49.834000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:47:49.845000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+D, [2017-03-09T09:47:59.836000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x6429076b @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:47:59.841000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:47:59.856000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 26.0ms
+2017-03-09 09:48:00 -0500: Running index round
+D, [2017-03-09T09:48:00.997000 #1490] DEBUG -- : Thread-4232: GET /repositories [session: #<Session:0x10b7e895 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:48:01.001000 #1490] DEBUG -- : Thread-4232: Post-processed params: {}
+D, [2017-03-09T09:48:01.003000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 13.0ms
+D, [2017-03-09T09:48:01.023000 #1490] DEBUG -- : Thread-10048: GET /delete-feed?modified_since=1489070820&page=1&page_size=25 [session: #<Session:0x36de14e @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:48:01.027000 #1490] DEBUG -- : Thread-10048: Post-processed params: {"modified_since"=>1489070820, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:48:01.041000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 25.0ms
+D, [2017-03-09T09:48:09.844000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x1214ce74 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:48:09.861000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:48:09.877000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 40.0ms
+D, [2017-03-09T09:48:17.706000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 48520.0ms
+D, [2017-03-09T09:48:17.706000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60014.0ms
+D, [2017-03-09T09:48:19.842000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x390b8b87 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:48:19.845000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:48:19.855000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:48:22.720000 #1490] DEBUG -- : Thread-10048: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:48:22.720000 #1490] DEBUG -- : Thread-4244: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:48:22.723000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:48:22.723000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:48:29.851000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x3ad8ff1c @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:48:29.855000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:48:29.866000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 22.0ms
+D, [2017-03-09T09:48:30.198000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60031.0ms
+D, [2017-03-09T09:48:30.212000 #1490] DEBUG -- : Thread-4242: GET /update-feed?last_sequence=1489070826&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x59d75e0c @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:48:30.219000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>1489070826, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+2017-03-09 09:48:31 -0500: Running index round
+D, [2017-03-09T09:48:31.140000 #1490] DEBUG -- : Thread-4232: GET /repositories [session: #<Session:0x721c75f5 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:48:31.142000 #1490] DEBUG -- : Thread-4232: Post-processed params: {}
+D, [2017-03-09T09:48:31.146000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 59.0ms
+D, [2017-03-09T09:48:31.219000 #1490] DEBUG -- : Thread-4238: GET /delete-feed?modified_since=1489070851&page=1&page_size=25 [session: #<Session:0x134205f1 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:48:31.222000 #1490] DEBUG -- : Thread-4238: Post-processed params: {"modified_since"=>1489070851, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:48:31.236000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 83.0ms
+D, [2017-03-09T09:48:39.853000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x82b971f @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:48:39.857000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:48:39.867000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 21.0ms
+D, [2017-03-09T09:48:49.860000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x790049e6 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:48:49.863000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:48:49.873000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:48:59.869000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x5d9b0eb7 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:48:59.873000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:48:59.883000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 22.0ms
+2017-03-09 09:49:01 -0500: Running index round
+D, [2017-03-09T09:49:01.259000 #1490] DEBUG -- : Thread-10050: GET /repositories [session: #<Session:0xbb9d46d @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:49:01.261000 #1490] DEBUG -- : Thread-10050: Post-processed params: {}
+D, [2017-03-09T09:49:01.264000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 12.0ms
+D, [2017-03-09T09:49:01.279000 #1490] DEBUG -- : Thread-4232: GET /delete-feed?modified_since=1489070881&page=1&page_size=25 [session: #<Session:0x3b40b338 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:49:01.283000 #1490] DEBUG -- : Thread-4232: Post-processed params: {"modified_since"=>1489070881, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:49:01.297000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 25.0ms
+D, [2017-03-09T09:49:09.867000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x63427d51 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:49:09.870000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:49:09.880000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 21.0ms
+Mar 09, 2017 9:49:13 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-03-09 09:49:13 -0500
+
+Mar 09, 2017 9:49:13 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Processing by SiteController#index as HTML
+
+D, [2017-03-09T09:49:13.728000 #1490] DEBUG -- : Thread-4232: POST /users/public_anonymous/login [session: nil]
+D, [2017-03-09T09:49:13.732000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:username=>"public_anonymous", :password=>"[FILTERED]", :expiring=>false}
+D, [2017-03-09T09:49:13.929000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"503"}, ["{\"session\":\"81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb\",\"user\":{\"lock_version\":1,\"username\":\"public_anonymous\",\"name\":\"Public Interface Anonymous\",\"is_system_user\":true,\"create_time\":\"2017-03-09T14:46:47Z\",\"system_mtime\":\"2017-03-09T14:49:13Z\",\"user_mtime\":\"2017-03-09T14:49:13Z\",\"jsonmodel_type\":\"user\",\"groups\":[],\"is_admin\"... in 201.0ms
+D, [2017-03-09T09:49:13.934000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"366"}, ["[{\"record\":{\"lock_version\":1,\"username\":\"public_anonymous\",\"name\":\"Public Interface Anonymous\",\"is_system_user\":true,\"create_time\":\"2017-03-09T14:46:47Z\",\"system_mtime\":\"2017-03-09T14:49:13Z\",\"user_mtime\":\"2017-03-09T14:49:13Z\",\"jsonmodel_type\":\"user\",\"groups\":[],\"is_admin\":false,\"uri\":\"/users/3\"},\"uri\":\"/users/3\",\"sequence\":1489070827,\"ti... in 43729.0ms
+Mar 09, 2017 9:49:13 AM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
+Mar 09, 2017 9:49:13 AM org.apache.solr.core.SolrCore openNewSearcher
+INFO: SolrIndexSearcher has not changed - not re-opening: org.apache.solr.search.SolrIndexSearcher
+Mar 09, 2017 9:49:13 AM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Mar 09, 2017 9:49:13 AM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [collection1] webapp= path=/update params={} {commit=} 0 2
+D, [2017-03-09T09:49:13.958000 #1490] DEBUG -- : Thread-10050: GET /repositories [session: #<Session:0x8c6560d @store={:user=>"public_anonymous", :login_time=>2017-03-09 09:49:13 -0500, :expirable=>false}, @id="81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb">]
+D, [2017-03-09T09:49:13.960000 #1490] DEBUG -- : Thread-10050: Post-processed params: {}
+D, [2017-03-09T09:49:13.962000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 24.0ms
+D, [2017-03-09T09:49:13.995000 #1490] DEBUG -- : Thread-4242: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x7893f6d1 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:49:14.002000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_simple_search.html.erb (6.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_advanced_search.html.erb (26.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/index.html.erb within layouts/application (212.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_branding.html.erb (3.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_header.html.erb (8.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_breadcrumb.html.erb (4.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_footer.html.erb (5.0ms)
+
+Mar 09, 2017 9:49:14 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Completed 200 OK in 571.0ms (Views: 329.0ms)
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Started GET "/search?type=resource" for 0:0:0:0:0:0:0:1 at 2017-03-09 09:49:18 -0500
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Processing by SearchController#search as HTML
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Parameters: {"type"=>"resource"}
+
+D, [2017-03-09T09:49:18.724000 #1490] DEBUG -- : Thread-4232: GET /search?page=1&sort=title_sort+asc&type%5B%5D=resource&facet%5B%5D=repository&facet%5B%5D=primary_type&facet%5B%5D=subjects&facet%5B%5D=source&facet%5B%5D=linked_agent_roles [session: #<Session:0xa61feac @store={:user=>"public_anonymous", :login_time=>2017-03-09 09:49:13 -0500, :expirable=>false}, @id="81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb">]
+D, [2017-03-09T09:49:18.728000 #1490] DEBUG -- : Thread-4232: Post-processed params: {"page"=>1, :type=>["resource"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+D, [2017-03-09T09:49:18.747000 #1490] DEBUG -- : Thread-4232: {"page"=>1, :type=>["resource"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+Mar 09, 2017 9:49:18 AM org.apache.solr.request.UnInvertedField <init>
+INFO: UnInverted multi-valued field {field=subjects,memSize=4288,tindexSize=0,time=0,phase1=0,nTerms=0,bigTerms=0,termInstances=0,uses=0}
+Mar 09, 2017 9:49:18 AM org.apache.solr.request.UnInvertedField <init>
+INFO: UnInverted multi-valued field {field=linked_agent_roles,memSize=4288,tindexSize=0,time=0,phase1=0,nTerms=0,bigTerms=0,termInstances=0,uses=0}
+Mar 09, 2017 9:49:18 AM org.apache.solr.core.SolrCore execute
+INFO: [collection1] webapp= path=/select params={facet=true&sort=title_sort+asc&csv.encapsulator="&facet.limit=100&qf=four_part_id^3+title^2+finding_aid_filing_title^2+fullrecord&csv.escape=\&csv.header=true&wt=json&defType=edismax&rows=10&pf=four_part_id^4&start=0&q=*:*&facet.field=repository&facet.field=primary_type&facet.field=subjects&facet.field=source&facet.field=linked_agent_roles&fq=types:("resource")&fq=-exclude_by_default:true&fq=publish:true} hits=0 status=0 QTime=126 
+D, [2017-03-09T09:49:18.883000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"308"}, ["{\"page_size\":10,\"first_page\":1,\"last_page\":0,\"this_page\":1,\"offset_first\":1,\"offset_last\":0,\"total_hits\":0,\"results\":[],\"facets\":{\"facet_queries\":{},\"facet_fields\":{\"repository\":[],\"primary_type\":[],\"subjects\":[],\"source\":[],\"linked_agent_roles\":[]},\"facet_dates\":{},\"facet_ranges\":{},\"facet_intervals\":{}}}\n"]]... in 170.0ms
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_components_switch.html.erb (6.0ms)
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_filter.html.erb (8.0ms)
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_inline_results.html.erb (6.0ms)
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/results.html.erb within layouts/application (41.0ms)
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_branding.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:18 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_header.html.erb (28.0ms)
+
+Mar 09, 2017 9:49:19 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_advanced_search.html.erb (64.0ms)
+
+Mar 09, 2017 9:49:19 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_breadcrumb.html.erb (0.0ms)
+
+Mar 09, 2017 9:49:19 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_footer.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:19 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Completed 200 OK in 381.0ms (Views: 199.0ms)
+
+D, [2017-03-09T09:49:19.868000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x7efe69d5 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:49:19.871000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:49:19.883000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Started GET "/search?type=subject" for 0:0:0:0:0:0:0:1 at 2017-03-09 09:49:20 -0500
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Processing by SearchController#search as HTML
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Parameters: {"type"=>"subject"}
+
+D, [2017-03-09T09:49:20.033000 #1490] DEBUG -- : Thread-10050: GET /search?page=1&sort=title_sort+asc&type%5B%5D=subject&facet%5B%5D=repository&facet%5B%5D=primary_type&facet%5B%5D=subjects&facet%5B%5D=source&facet%5B%5D=linked_agent_roles [session: #<Session:0x5e97a9b6 @store={:user=>"public_anonymous", :login_time=>2017-03-09 09:49:13 -0500, :expirable=>false}, @id="81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb">]
+D, [2017-03-09T09:49:20.036000 #1490] DEBUG -- : Thread-10050: Post-processed params: {"page"=>1, :type=>["subject"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+D, [2017-03-09T09:49:20.046000 #1490] DEBUG -- : Thread-10050: {"page"=>1, :type=>["subject"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+Mar 09, 2017 9:49:20 AM org.apache.solr.core.SolrCore execute
+INFO: [collection1] webapp= path=/select params={facet=true&sort=title_sort+asc&csv.encapsulator="&facet.limit=100&qf=four_part_id^3+title^2+finding_aid_filing_title^2+fullrecord&csv.escape=\&csv.header=true&wt=json&defType=edismax&rows=10&pf=four_part_id^4&start=0&q=*:*&facet.field=repository&facet.field=primary_type&facet.field=subjects&facet.field=source&facet.field=linked_agent_roles&fq=types:("subject")&fq=-exclude_by_default:true&fq=publish:true} hits=0 status=0 QTime=2 
+D, [2017-03-09T09:49:20.055000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"308"}, ["{\"page_size\":10,\"first_page\":1,\"last_page\":0,\"this_page\":1,\"offset_first\":1,\"offset_last\":0,\"total_hits\":0,\"results\":[],\"facets\":{\"facet_queries\":{},\"facet_fields\":{\"repository\":[],\"primary_type\":[],\"subjects\":[],\"source\":[],\"linked_agent_roles\":[]},\"facet_dates\":{},\"facet_ranges\":{},\"facet_intervals\":{}}}\n"]]... in 31.0ms
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_components_switch.html.erb (0.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_filter.html.erb (4.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_inline_results.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/results.html.erb within layouts/application (15.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_branding.html.erb (4.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_header.html.erb (10.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_advanced_search.html.erb (21.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_breadcrumb.html.erb (0.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_footer.html.erb (0.0ms)
+
+Mar 09, 2017 9:49:20 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Completed 200 OK in 118.0ms (Views: 77.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Started GET "/search?type=resource" for 0:0:0:0:0:0:0:1 at 2017-03-09 09:49:21 -0500
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Processing by SearchController#search as HTML
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Parameters: {"type"=>"resource"}
+
+D, [2017-03-09T09:49:21.042000 #1490] DEBUG -- : Thread-10050: GET /search?page=1&sort=title_sort+asc&type%5B%5D=resource&facet%5B%5D=repository&facet%5B%5D=primary_type&facet%5B%5D=subjects&facet%5B%5D=source&facet%5B%5D=linked_agent_roles [session: #<Session:0x51c14c40 @store={:user=>"public_anonymous", :login_time=>2017-03-09 09:49:13 -0500, :expirable=>false}, @id="81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb">]
+D, [2017-03-09T09:49:21.047000 #1490] DEBUG -- : Thread-10050: Post-processed params: {"page"=>1, :type=>["resource"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+D, [2017-03-09T09:49:21.056000 #1490] DEBUG -- : Thread-10050: {"page"=>1, :type=>["resource"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+Mar 09, 2017 9:49:21 AM org.apache.solr.core.SolrCore execute
+INFO: [collection1] webapp= path=/select params={facet=true&sort=title_sort+asc&csv.encapsulator="&facet.limit=100&qf=four_part_id^3+title^2+finding_aid_filing_title^2+fullrecord&csv.escape=\&csv.header=true&wt=json&defType=edismax&rows=10&pf=four_part_id^4&start=0&q=*:*&facet.field=repository&facet.field=primary_type&facet.field=subjects&facet.field=source&facet.field=linked_agent_roles&fq=types:("resource")&fq=-exclude_by_default:true&fq=publish:true} hits=0 status=0 QTime=2 
+D, [2017-03-09T09:49:21.066000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"308"}, ["{\"page_size\":10,\"first_page\":1,\"last_page\":0,\"this_page\":1,\"offset_first\":1,\"offset_last\":0,\"total_hits\":0,\"results\":[],\"facets\":{\"facet_queries\":{},\"facet_fields\":{\"repository\":[],\"primary_type\":[],\"subjects\":[],\"source\":[],\"linked_agent_roles\":[]},\"facet_dates\":{},\"facet_ranges\":{},\"facet_intervals\":{}}}\n"]]... in 32.0ms
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_components_switch.html.erb (6.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_filter.html.erb (4.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_inline_results.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/results.html.erb within layouts/application (25.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_branding.html.erb (2.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_header.html.erb (15.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_advanced_search.html.erb (15.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_breadcrumb.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_footer.html.erb (0.0ms)
+
+Mar 09, 2017 9:49:21 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Completed 200 OK in 133.0ms (Views: 90.0ms)
+
+D, [2017-03-09T09:49:22.732000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60012.0ms
+D, [2017-03-09T09:49:22.732000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60012.0ms
+D, [2017-03-09T09:49:27.745000 #1490] DEBUG -- : Thread-10048: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:49:27.751000 #1490] DEBUG -- : Thread-10050: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:49:27.752000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:49:27.757000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:49:29.889000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0x49995e97 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:49:29.901000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:49:29.916000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 49.0ms
+2017-03-09 09:49:31 -0500: Running index round
+D, [2017-03-09T09:49:31.335000 #1490] DEBUG -- : Thread-4244: GET /repositories [session: #<Session:0x347e622e @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:49:31.337000 #1490] DEBUG -- : Thread-4244: Post-processed params: {}
+D, [2017-03-09T09:49:31.340000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 11.0ms
+D, [2017-03-09T09:49:31.400000 #1490] DEBUG -- : Thread-4238: GET /delete-feed?modified_since=1489070911&page=1&page_size=25 [session: #<Session:0x44bfc261 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:49:31.403000 #1490] DEBUG -- : Thread-4238: Post-processed params: {"modified_since"=>1489070911, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:49:31.424000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 32.0ms
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Started GET "/search?type=subject" for 0:0:0:0:0:0:0:1 at 2017-03-09 09:49:32 -0500
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Processing by SearchController#search as HTML
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Parameters: {"type"=>"subject"}
+
+D, [2017-03-09T09:49:32.070000 #1490] DEBUG -- : Thread-4238: GET /search?page=1&sort=title_sort+asc&type%5B%5D=subject&facet%5B%5D=repository&facet%5B%5D=primary_type&facet%5B%5D=subjects&facet%5B%5D=source&facet%5B%5D=linked_agent_roles [session: #<Session:0x70713432 @store={:user=>"public_anonymous", :login_time=>2017-03-09 09:49:13 -0500, :expirable=>false}, @id="81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb">]
+D, [2017-03-09T09:49:32.080000 #1490] DEBUG -- : Thread-4238: Post-processed params: {"page"=>1, :type=>["subject"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+D, [2017-03-09T09:49:32.087000 #1490] DEBUG -- : Thread-4238: {"page"=>1, :type=>["subject"], :sort=>"title_sort asc", :facet=>["repository", "primary_type", "subjects", "source", "linked_agent_roles"], "modified_since"=>0, "page_size"=>10}
+Mar 09, 2017 9:49:32 AM org.apache.solr.core.SolrCore execute
+INFO: [collection1] webapp= path=/select params={facet=true&sort=title_sort+asc&csv.encapsulator="&facet.limit=100&qf=four_part_id^3+title^2+finding_aid_filing_title^2+fullrecord&csv.escape=\&csv.header=true&wt=json&defType=edismax&rows=10&pf=four_part_id^4&start=0&q=*:*&facet.field=repository&facet.field=primary_type&facet.field=subjects&facet.field=source&facet.field=linked_agent_roles&fq=types:("subject")&fq=-exclude_by_default:true&fq=publish:true} hits=0 status=0 QTime=2 
+D, [2017-03-09T09:49:32.094000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"308"}, ["{\"page_size\":10,\"first_page\":1,\"last_page\":0,\"this_page\":1,\"offset_first\":1,\"offset_last\":0,\"total_hits\":0,\"results\":[],\"facets\":{\"facet_queries\":{},\"facet_fields\":{\"repository\":[],\"primary_type\":[],\"subjects\":[],\"source\":[],\"linked_agent_roles\":[]},\"facet_dates\":{},\"facet_ranges\":{},\"facet_intervals\":{}}}\n"]]... in 32.0ms
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_components_switch.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_filter.html.erb (56.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/_inline_results.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered search/results.html.erb within layouts/application (70.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_branding.html.erb (2.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_header.html.erb (11.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_advanced_search.html.erb (10.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_breadcrumb.html.erb (0.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_footer.html.erb (1.0ms)
+
+Mar 09, 2017 9:49:32 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Completed 200 OK in 181.0ms (Views: 140.0ms)
+
+D, [2017-03-09T09:49:39.875000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x2b454a1e @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:49:39.878000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:49:39.891000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 24.0ms
+D, [2017-03-09T09:49:49.912000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0x49926369 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:49:49.925000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:49:49.938000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 75.0ms
+D, [2017-03-09T09:49:59.875000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x3f0d8e6a @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:49:59.878000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:49:59.896000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 30.0ms
+2017-03-09 09:50:01 -0500: Running index round
+D, [2017-03-09T09:50:01.466000 #1490] DEBUG -- : Thread-4232: GET /repositories [session: #<Session:0x48503fc3 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:50:01.497000 #1490] DEBUG -- : Thread-4232: Post-processed params: {}
+D, [2017-03-09T09:50:01.501000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 43.0ms
+D, [2017-03-09T09:50:01.580000 #1490] DEBUG -- : Thread-4244: GET /delete-feed?modified_since=1489070941&page=1&page_size=25 [session: #<Session:0x273d5c28 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:50:01.583000 #1490] DEBUG -- : Thread-4244: Post-processed params: {"modified_since"=>1489070941, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:50:01.598000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 58.0ms
+D, [2017-03-09T09:50:09.876000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x47ace3a9 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:50:09.881000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:50:09.893000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 25.0ms
+D, [2017-03-09T09:50:14.028000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60078.0ms
+D, [2017-03-09T09:50:14.048000 #1490] DEBUG -- : Thread-4238: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x2bb8cb47 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:50:14.052000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+D, [2017-03-09T09:50:19.895000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0xf7dac32 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:50:19.898000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:50:19.910000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+D, [2017-03-09T09:50:27.761000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60016.0ms
+D, [2017-03-09T09:50:27.761000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60010.0ms
+D, [2017-03-09T09:50:29.888000 #1490] DEBUG -- : Thread-4242: POST /update_monitor [session: #<Session:0x38249b @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:50:29.891000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:50:29.901000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 21.0ms
+2017-03-09 09:50:31 -0500: Running index round
+D, [2017-03-09T09:50:31.620000 #1490] DEBUG -- : Thread-10048: GET /repositories [session: #<Session:0x7286facf @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:50:31.623000 #1490] DEBUG -- : Thread-10048: Post-processed params: {}
+D, [2017-03-09T09:50:31.625000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 12.0ms
+D, [2017-03-09T09:50:31.643000 #1490] DEBUG -- : Thread-4232: GET /delete-feed?modified_since=1489070971&page=1&page_size=25 [session: #<Session:0x146bb0d3 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:50:31.645000 #1490] DEBUG -- : Thread-4232: Post-processed params: {"modified_since"=>1489070971, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:50:31.659000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 24.0ms
+D, [2017-03-09T09:50:32.775000 #1490] DEBUG -- : Thread-10050: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:50:32.776000 #1490] DEBUG -- : Thread-4242: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:50:32.778000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:50:32.778000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:50:39.894000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x3de0878d @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:50:39.897000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:50:39.912000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 26.0ms
+D, [2017-03-09T09:50:49.895000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x4ce78d90 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:50:49.898000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:50:49.908000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 21.0ms
+D, [2017-03-09T09:50:59.902000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x9bd695f @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:50:59.905000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:50:59.917000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 22.0ms
+2017-03-09 09:51:01 -0500: Running index round
+D, [2017-03-09T09:51:01.678000 #1490] DEBUG -- : Thread-4232: GET /repositories [session: #<Session:0x4349a986 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:51:01.680000 #1490] DEBUG -- : Thread-4232: Post-processed params: {}
+D, [2017-03-09T09:51:01.682000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 11.0ms
+D, [2017-03-09T09:51:01.697000 #1490] DEBUG -- : Thread-4244: GET /delete-feed?modified_since=1489071001&page=1&page_size=25 [session: #<Session:0x4deef06a @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:51:01.700000 #1490] DEBUG -- : Thread-4244: Post-processed params: {"modified_since"=>1489071001, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:51:01.714000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 25.0ms
+D, [2017-03-09T09:51:09.952000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x606597f9 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:51:09.955000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:51:09.967000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 68.0ms
+D, [2017-03-09T09:51:14.068000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60027.0ms
+D, [2017-03-09T09:51:14.082000 #1490] DEBUG -- : Thread-4232: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x1487f84f @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:51:14.085000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+D, [2017-03-09T09:51:19.910000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0xe4dd35c @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:51:19.913000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:51:19.924000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 22.0ms
+D, [2017-03-09T09:51:29.928000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0x6637f8c9 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:51:29.931000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:51:29.942000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 31.0ms
+2017-03-09 09:51:31 -0500: Running index round
+D, [2017-03-09T09:51:31.765000 #1490] DEBUG -- : Thread-10048: GET /repositories [session: #<Session:0x575356c2 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:51:31.767000 #1490] DEBUG -- : Thread-10048: Post-processed params: {}
+D, [2017-03-09T09:51:31.769000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 24.0ms
+D, [2017-03-09T09:51:31.793000 #1490] DEBUG -- : Thread-4238: GET /delete-feed?modified_since=1489071031&page=1&page_size=25 [session: #<Session:0x220daff0 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:51:31.796000 #1490] DEBUG -- : Thread-4238: Post-processed params: {"modified_since"=>1489071031, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:51:31.815000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 30.0ms
+D, [2017-03-09T09:51:32.789000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60014.0ms
+D, [2017-03-09T09:51:32.789000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60014.0ms
+D, [2017-03-09T09:51:37.802000 #1490] DEBUG -- : Thread-4238: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:51:37.803000 #1490] DEBUG -- : Thread-4244: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:51:37.805000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:51:37.805000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:51:39.923000 #1490] DEBUG -- : Thread-4242: POST /update_monitor [session: #<Session:0x7262288b @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:51:39.928000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:51:39.938000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+D, [2017-03-09T09:51:49.918000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x66a0fd5c @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:51:49.921000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:51:49.931000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:51:59.921000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x696e8a1e @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:51:59.924000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:51:59.934000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+2017-03-09 09:52:01 -0500: Running index round
+D, [2017-03-09T09:52:01.836000 #1490] DEBUG -- : Thread-4242: GET /repositories [session: #<Session:0x5fc50947 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:52:01.839000 #1490] DEBUG -- : Thread-4242: Post-processed params: {}
+D, [2017-03-09T09:52:01.841000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 12.0ms
+D, [2017-03-09T09:52:01.855000 #1490] DEBUG -- : Thread-10048: GET /delete-feed?modified_since=1489071061&page=1&page_size=25 [session: #<Session:0x7759d959 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:52:01.859000 #1490] DEBUG -- : Thread-10048: Post-processed params: {"modified_since"=>1489071061, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:52:01.874000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 26.0ms
+D, [2017-03-09T09:52:09.924000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x4ae3b120 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:52:09.927000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:52:09.938000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:52:14.102000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60028.0ms
+D, [2017-03-09T09:52:14.115000 #1490] DEBUG -- : Thread-4242: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x14f13f1d @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:52:14.118000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+D, [2017-03-09T09:52:19.969000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x2fbd6220 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:52:19.972000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:52:19.982000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 59.0ms
+D, [2017-03-09T09:52:29.937000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x39de5ff4 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:52:29.941000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:52:29.953000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+2017-03-09 09:52:31 -0500: Running index round
+D, [2017-03-09T09:52:31.895000 #1490] DEBUG -- : Thread-10048: GET /repositories [session: #<Session:0x176a5cfa @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:52:31.898000 #1490] DEBUG -- : Thread-10048: Post-processed params: {}
+D, [2017-03-09T09:52:31.900000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 11.0ms
+D, [2017-03-09T09:52:31.916000 #1490] DEBUG -- : Thread-10050: GET /delete-feed?modified_since=1489071091&page=1&page_size=25 [session: #<Session:0xb7d7c40 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:52:31.919000 #1490] DEBUG -- : Thread-10050: Post-processed params: {"modified_since"=>1489071091, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:52:31.932000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 24.0ms
+D, [2017-03-09T09:52:37.816000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60014.0ms
+D, [2017-03-09T09:52:37.816000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60014.0ms
+D, [2017-03-09T09:52:39.940000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x129d62a7 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:52:39.943000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:52:39.954000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:52:42.831000 #1490] DEBUG -- : Thread-10048: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:52:42.831000 #1490] DEBUG -- : Thread-4232: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:52:42.834000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:52:42.834000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:52:49.941000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x3ed8240d @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:52:49.944000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:52:49.954000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:52:59.946000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x63147fad @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:52:59.949000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:52:59.963000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 24.0ms
+2017-03-09 09:53:01 -0500: Running index round
+D, [2017-03-09T09:53:01.952000 #1490] DEBUG -- : Thread-4238: GET /repositories [session: #<Session:0x5dad95bd @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:53:01.954000 #1490] DEBUG -- : Thread-4238: Post-processed params: {}
+D, [2017-03-09T09:53:01.956000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 11.0ms
+D, [2017-03-09T09:53:01.972000 #1490] DEBUG -- : Thread-4244: GET /delete-feed?modified_since=1489071121&page=1&page_size=25 [session: #<Session:0x2bf93e0a @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:53:01.975000 #1490] DEBUG -- : Thread-4244: Post-processed params: {"modified_since"=>1489071121, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:53:01.989000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 25.0ms
+D, [2017-03-09T09:53:09.947000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0x32defe6f @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:53:09.950000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:53:09.959000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 19.0ms
+D, [2017-03-09T09:53:14.133000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60025.0ms
+D, [2017-03-09T09:53:14.147000 #1490] DEBUG -- : Thread-4244: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x77678e04 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:53:14.150000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+D, [2017-03-09T09:53:19.952000 #1490] DEBUG -- : Thread-4242: POST /update_monitor [session: #<Session:0x4ebd2d61 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:53:19.955000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:53:19.965000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 19.0ms
+D, [2017-03-09T09:53:29.997000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x3c35f8c9 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:53:30.000000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:53:30.009000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 62.0ms
+2017-03-09 09:53:32 -0500: Running index round
+D, [2017-03-09T09:53:32.011000 #1490] DEBUG -- : Thread-4238: GET /repositories [session: #<Session:0x4aaac085 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:53:32.013000 #1490] DEBUG -- : Thread-4238: Post-processed params: {}
+D, [2017-03-09T09:53:32.015000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 11.0ms
+D, [2017-03-09T09:53:32.029000 #1490] DEBUG -- : Thread-4242: GET /delete-feed?modified_since=1489071151&page=1&page_size=25 [session: #<Session:0x320ac634 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:53:32.032000 #1490] DEBUG -- : Thread-4242: Post-processed params: {"modified_since"=>1489071151, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:53:32.047000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 24.0ms
+D, [2017-03-09T09:53:39.960000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x2855aaba @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:53:39.963000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:53:39.973000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:53:42.845000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60015.0ms
+D, [2017-03-09T09:53:42.845000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60015.0ms
+D, [2017-03-09T09:53:47.859000 #1490] DEBUG -- : Thread-4242: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:53:47.859000 #1490] DEBUG -- : Thread-4232: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:53:47.862000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:53:47.862000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:53:49.963000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x76f5b454 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:53:49.966000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:53:49.977000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 21.0ms
+D, [2017-03-09T09:53:59.964000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x170061dd @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:53:59.968000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:53:59.979000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 22.0ms
+2017-03-09 09:54:02 -0500: Running index round
+D, [2017-03-09T09:54:02.069000 #1490] DEBUG -- : Thread-10048: GET /repositories [session: #<Session:0x92a11e6 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:54:02.071000 #1490] DEBUG -- : Thread-10048: Post-processed params: {}
+D, [2017-03-09T09:54:02.074000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 13.0ms
+D, [2017-03-09T09:54:02.092000 #1490] DEBUG -- : Thread-10050: GET /delete-feed?modified_since=1489071182&page=1&page_size=25 [session: #<Session:0x613523a8 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:54:02.094000 #1490] DEBUG -- : Thread-10050: Post-processed params: {"modified_since"=>1489071182, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:54:02.108000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 24.0ms
+D, [2017-03-09T09:54:09.971000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x3bd4efc7 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:54:09.975000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:54:09.992000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 27.0ms
+D, [2017-03-09T09:54:14.167000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60027.0ms
+D, [2017-03-09T09:54:14.180000 #1490] DEBUG -- : Thread-10048: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x4a6aeea1 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:54:14.183000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+D, [2017-03-09T09:54:19.988000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x317ffe34 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:54:19.992000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:54:20.001000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 19.0ms
+D, [2017-03-09T09:54:29.984000 #1490] DEBUG -- : Thread-10050: POST /update_monitor [session: #<Session:0x100a6f22 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:54:29.988000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:54:29.998000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 22.0ms
+2017-03-09 09:54:32 -0500: Running index round
+D, [2017-03-09T09:54:32.174000 #1490] DEBUG -- : Thread-4244: GET /repositories [session: #<Session:0x2b368964 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:54:32.179000 #1490] DEBUG -- : Thread-4244: Post-processed params: {}
+D, [2017-03-09T09:54:32.181000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 63.0ms
+D, [2017-03-09T09:54:32.213000 #1490] DEBUG -- : Thread-10050: GET /delete-feed?modified_since=1489071212&page=1&page_size=25 [session: #<Session:0x6a220f46 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:54:32.216000 #1490] DEBUG -- : Thread-10050: Post-processed params: {"modified_since"=>1489071212, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:54:32.229000 #1490] DEBUG -- : Thread-10050: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 39.0ms
+D, [2017-03-09T09:54:39.988000 #1490] DEBUG -- : Thread-4238: POST /update_monitor [session: #<Session:0x1f45b997 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:54:39.994000 #1490] DEBUG -- : Thread-4238: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:54:40.004000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+D, [2017-03-09T09:54:47.868000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60009.0ms
+D, [2017-03-09T09:54:47.868000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60009.0ms
+D, [2017-03-09T09:54:49.984000 #1490] DEBUG -- : Thread-4244: POST /update_monitor [session: #<Session:0x4594d5b @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:54:49.987000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:54:49.997000 #1490] DEBUG -- : Thread-4244: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 20.0ms
+D, [2017-03-09T09:54:52.880000 #1490] DEBUG -- : Thread-4244: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:54:52.881000 #1490] DEBUG -- : Thread-10050: GET /notifications?last_sequence=1489070811 [session: nil]
+D, [2017-03-09T09:54:52.883000 #1490] DEBUG -- : Thread-4244: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:54:52.883000 #1490] DEBUG -- : Thread-10050: Post-processed params: {:last_sequence=>1489070811}
+D, [2017-03-09T09:54:59.988000 #1490] DEBUG -- : Thread-4242: POST /update_monitor [session: #<Session:0x15bdf3b0 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:54:59.991000 #1490] DEBUG -- : Thread-4242: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:55:00.002000 #1490] DEBUG -- : Thread-4242: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 21.0ms
+2017-03-09 09:55:02 -0500: Running index round
+D, [2017-03-09T09:55:02.253000 #1490] DEBUG -- : Thread-4238: GET /repositories [session: #<Session:0x2dac3f96 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:55:02.255000 #1490] DEBUG -- : Thread-4238: Post-processed params: {}
+D, [2017-03-09T09:55:02.257000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 10.0ms
+D, [2017-03-09T09:55:02.273000 #1490] DEBUG -- : Thread-4232: GET /delete-feed?modified_since=1489071242&page=1&page_size=25 [session: #<Session:0xc9bc341 @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:00 -0500, :expirable=>false}, @id="d514ce9724774c48cce2ae8a5fdf8a3a41ac21ffbf40971e1bf651e8ab9c97cf">]
+D, [2017-03-09T09:55:02.277000 #1490] DEBUG -- : Thread-4232: Post-processed params: {"modified_since"=>1489071242, "page"=>1, "page_size"=>25}
+D, [2017-03-09T09:55:02.291000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"58"}, ["{\"first_page\":1,\"last_page\":1,\"this_page\":1,\"results\":[]}\n"]]... in 24.0ms
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-03-09 09:55:09 -0500
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Processing by SiteController#index as HTML
+
+D, [2017-03-09T09:55:09.359000 #1490] DEBUG -- : Thread-4238: GET /repositories [session: #<Session:0x32232bce @store={:user=>"public_anonymous", :login_time=>2017-03-09 09:49:13 -0500, :expirable=>false}, @id="81cfa6794a79369fdb7715ea5f2d8faeeaf1eac8df1efaacbfcc5b405a62b4bb">]
+D, [2017-03-09T09:55:09.361000 #1490] DEBUG -- : Thread-4238: Post-processed params: {}
+D, [2017-03-09T09:55:09.363000 #1490] DEBUG -- : Thread-4238: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 17.0ms
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_simple_search.html.erb (4.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_advanced_search.html.erb (29.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/index.html.erb within layouts/application (43.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_branding.html.erb (2.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_header.html.erb (4.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_breadcrumb.html.erb (0.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO:   Rendered site/_footer.html.erb (0.0ms)
+
+Mar 09, 2017 9:55:09 AM org.eclipse.jetty.server.handler.ContextHandler$Context log
+INFO: Completed 200 OK in 105.0ms (Views: 80.0ms)
+
+D, [2017-03-09T09:55:09.995000 #1490] DEBUG -- : Thread-4232: POST /update_monitor [session: #<Session:0x5d81d7d5 @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:55:09.998000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:55:10.009000 #1490] DEBUG -- : Thread-4232: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 23.0ms
+D, [2017-03-09T09:55:14.196000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["[]\n"]]... in 60023.0ms
+D, [2017-03-09T09:55:14.216000 #1490] DEBUG -- : Thread-4232: GET /update-feed?last_sequence=1489070827&resolve[]=location_profile&resolve[]=container_profile&resolve[]=container_locations&resolve[]=subjects&resolve[]=linked_agents&resolve[]=linked_records&resolve[]=classifications&resolve[]=digital_object [session: #<Session:0x2625b0db @store={:user=>"search_indexer", :login_time=>2017-03-09 09:47:05 -0500, :expirable=>false}, @id="f68c550fbd7b472b19bad77b44bd104609b667b11ebcf6eb9e8dbdb82f00fe56">]
+D, [2017-03-09T09:55:14.219000 #1490] DEBUG -- : Thread-4232: Post-processed params: {:last_sequence=>1489070827, :resolve=>["location_profile", "container_profile", "container_locations", "subjects", "linked_agents", "linked_records", "classifications", "digital_object"]}
+D, [2017-03-09T09:55:19.999000 #1490] DEBUG -- : Thread-10048: POST /update_monitor [session: #<Session:0x6029f36b @store={:user=>"staff_system", :login_time=>2017-03-09 09:47:30 -0500, :expirable=>false}, @id="0ad230b666697fbc4c36cb09f5ae6840230ac46de26f7414511b8dac588e068f">]
+D, [2017-03-09T09:55:20.002000 #1490] DEBUG -- : Thread-10048: Post-processed params: {:active_edits=>#<JSONModel(:active_edits) {"jsonmodel_type"=>"active_edits", "active_edits"=>[]}>}
+D, [2017-03-09T09:55:20.011000 #1490] DEBUG -- : Thread-10048: Responded with [200, {"Content-Type"=>"application/json", "Cache-Control"=>"private, must-revalidate, max-age=0", "Content-Length"=>"3"}, ["{}\n"]]... in 19.0ms

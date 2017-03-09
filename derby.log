@@ -1,0 +1,8 @@
+----------------------------------------------------------------
+2017-03-09 14:45:59.516 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-015a-b388-9cfc-000010adffb0 
+on database directory /Users/corbettg/Sites/archivesspace_test/data/archivesspace_demo_db  with class loader org.jruby.util.JRubyClassLoader@296d53c3 
+Loaded from file:/users/corbettg/Sites/archivesspace_test/gems/gems/jdbc-derby-10.6.2.1-java/lib/derby-10.6.2.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_79-b15
+Database Class Loader started - derby.database.classpath=''
